@@ -1,0 +1,43 @@
+{
+  "name": "pressure-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "timer.js",
+  "scripts": {
+    "start": "node ./dist/server.js",
+    "dev": "set NODE_ENV=debug&&ts-node -r dotenv/config ./src/server.ts && npm run start",
+    "internalrelease": "set NODE_ENV=internalrelease&&ts-node -r dotenv/config ./src/server.ts && npm run start",
+    "prod": "set NODE_ENV=release&&ts-node -r dotenv/config ./src/server.ts && npm run start"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "supertest": "^4.0.2",
+    "compare-versions": "^3.5.1",
+    "dotenv": "6.1.0",
+    "express": "4.16.4",
+    "express-validator": "5.3.0",
+    "forever": "^1.0.0",
+    "is_js": "^0.9.0",
+    "moment": "2.22.2",
+    "mongoose": "5.3.1",
+    "request-promise": "4.2.2",
+    "request-promise-native": "1.0.5",
+    "socket.io": "2.1.1",
+    "typescript": "^3.1.6",
+    "winston": "^3.2.1",
+    "winston-loggly-bulk": "^3.0.1"
+  },
+  "devDependencies": {
+    "@sentry/node": "^5.7.1",
+    "@types/chai": "4.1.7",
+    "@types/express": "4.16.0",
+    "@types/mocha": "5.2.5",
+    "@types/mongoose": "5.3.1",
+    "@types/node": "10.12.3",
+    "@types/request-promise-native": "^1.0.15",
+    "mocha": "^6.2.2",
+    "ts-node": "^8.4.1",
+    "chai": "^4.2.0"
+  }
+}
